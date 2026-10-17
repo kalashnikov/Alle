@@ -47,7 +47,7 @@ export default function EmailDetail({ email }: { email: Email | null }) {
             transition={{ delay: 0.2, duration: 0.3 }}
             className="text-lg font-semibold text-foreground mb-2"
           >
-            选择一封邮件
+            選擇一封郵件
           </motion.h3>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -55,7 +55,7 @@ export default function EmailDetail({ email }: { email: Email | null }) {
             transition={{ delay: 0.3, duration: 0.3 }}
             className="text-sm text-muted-foreground max-w-sm"
           >
-            从左侧列表中选择一封邮件以查看详细内容
+            从左侧列表中選擇一封郵件以查看详细内容
           </motion.p>
         </div>
       </motion.div>

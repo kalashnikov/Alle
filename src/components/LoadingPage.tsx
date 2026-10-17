@@ -16,7 +16,7 @@ export default function LoadingPage() {
         >
           <RefreshCw className="h-12 w-12 text-muted-foreground" />
         </motion.div>
-        <p className="text-sm text-muted-foreground">加载中...</p>
+        <p className="text-sm text-muted-foreground">載入中...</p>
       </motion.div>
     </main>
   );

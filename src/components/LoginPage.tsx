@@ -36,10 +36,10 @@ export default function LoginPage({ onLoginSuccess }: { onLoginSuccess: (token: 
         localStorage.setItem("auth_token", data.data.token);
         onLoginSuccess(data.data.token);
       } else {
-        setError(data.error || "登录失败");
+        setError(data.error || "登入失敗");
       }
     } catch {
-      setError("网络错误,请稍后重试");
+      setError("網路錯誤，請稍後再試");
     } finally {
       setLoading(false);
     }
@@ -59,26 +59,26 @@ export default function LoginPage({ onLoginSuccess }: { onLoginSuccess: (token: 
           <form onSubmit={handleSubmit} className="space-y-4">
             <FieldGroup>
               <Field>
-                <FieldLabel htmlFor="username">用户名</FieldLabel>
+                <FieldLabel htmlFor="username">使用者名稱</FieldLabel>
                 <Input
                   id="username"
                   type="text"
                   value={username}
                   onChange={(event) => setUsername(event.target.value)}
-                  placeholder="请输入用户名"
+                  placeholder="請輸入使用者名稱"
                   required
                   disabled={loading}
                 />
               </Field>
 
               <Field>
-                <FieldLabel htmlFor="password">密码</FieldLabel>
+                <FieldLabel htmlFor="password">密碼</FieldLabel>
                 <Input
                   id="password"
                   type="password"
                   value={password}
                   onChange={(event) => setPassword(event.target.value)}
-                  placeholder="请输入密码"
+                  placeholder="請輸入密碼"
                   required
                   disabled={loading}
                 />
@@ -92,7 +92,7 @@ export default function LoginPage({ onLoginSuccess }: { onLoginSuccess: (token: 
                   disabled={loading}
                 />
                 <FieldLabel htmlFor="trustDevice" className="cursor-pointer select-none">
-                  信任此设备（Token 永不过期）
+                  信任此裝置（Token 永不過期）
                 </FieldLabel>
               </Field>
             </FieldGroup>
@@ -100,7 +100,7 @@ export default function LoginPage({ onLoginSuccess }: { onLoginSuccess: (token: 
             {error && <FieldError>{error}</FieldError>}
 
             <Button type="submit" className="w-full" disabled={loading}>
-              {loading ? "登录中..." : "登录"}
+              {loading ? "登入中..." : "登入"}
             </Button>
           </form>
         </div>
